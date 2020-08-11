@@ -1,0 +1,18 @@
+
+<div class="container">
+  <table class="table">
+    <thead class="bg-warning text-dark" >
+      <tr>
+        <th >Nombre</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="alert alert-light">
+      <tr *ngFor="let pokemon of pokemones; index as i" >
+        <td class="text-dark">{{pokemon.name}}</td>
+        <td>  <a routerLink="pokemon/{{i+1}}">Ver mas </a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
