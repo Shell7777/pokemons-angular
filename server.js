@@ -3,10 +3,8 @@ const path = require('path')
 const app = express ()
 
 
-app.use(express-static(__dirname+'/dist/angular-firebase'))
+app.set('port',process.env.PORT||3000)
 
-app.get('/*',(req,res)=>{
-  res.sendFile(path.join(__dirname+'/dist/angular-firebase/index.html'))
+app.listen(app.get('port'),()=>{
+  console.log('server on port '+app.get('port'))
 })
-
-app.listen(process.env.PORT||3000)
